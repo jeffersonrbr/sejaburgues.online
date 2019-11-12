@@ -1,0 +1,5 @@
+<html> <head> </head> </html> <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script> <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-firestore.js"></script> <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script> <script> 
+  // Your web app's Firebase configuration 
+  var firebaseConfig = { apiKey: "AIzaSyC22Fh9lUx2MbHXllDBgJyaIPPECbMwfcY", authDomain: "sejaburgues.firebaseapp.com", databaseURL: "https://sejaburgues.firebaseio.com", projectId: "sejaburgues", storageBucket: "sejaburgues.appspot.com", messagingSenderId: "146090179455", appId: "1:146090179455:web:308eb78eb3c4b1b33a784a", measurementId: "G-07VC8XJXB1" }; firebase.initializeApp(firebaseConfig); 
+  // Initialize Firebase var 
+  db = firebase.firestore(); db.collection("billionaries").get().then((querySnapshot) => { querySnapshot.forEach((doc) => { console.log(`${doc.id} => ${doc.data()}`); }); }); </script>
